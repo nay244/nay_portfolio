@@ -1,0 +1,583 @@
+/******* Overlay CSS Start *******/
+.overlay_bg {
+    position: fixed;
+    z-index: 10000;
+    background: var(--color-grey-dark);
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay:before, .overlay:after {
+    content: '';
+    border: 1rem solid var(--color-orange-light);
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.overlay:before {
+    animation-delay: .5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0; }
+    50% {
+        opacity: 1; }
+    100% {
+        transform: scale(1);
+        opacity: 0; }
+}
+
+/******* Overlay CSS End *******/
+
+/******* Navigation CSS Start *******/
+.nav-area {
+    height: 6rem;
+
+    &.sticky_navigation {
+        background: var(--color-white);
+        height: 8rem;
+    }
+}
+
+.navbar-nav {
+    margin-top: 2rem;
+}
+
+.sticky_navigation {
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out ;
+    transition: all 0.3s ease-out ;
+    -webkit-box-shadow: 0px 3px 4.5px 0.3px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 4.5px 0.3px rgba(0,0,0,0.25);
+}
+
+.sticky_navigation .main-menu{
+    margin-top: 0;
+}
+
+.sticky_navigation .navbar-brand, .sticky_navigation .navbar-brand span {
+    color: var(--color-black);
+}
+
+.sticky_navigation .navbar-brand:hover, .sticky_navigation .navbar-brand:focus, .sticky_navigation .navbar-brand span {
+    color: var(--color-orange-dark);
+}
+
+.sticky_navigation .nav li a {
+    color: var(--color-grey-dark);
+}
+
+.sticky_navigation .nav li.active a{
+    color: var(--color-orange);
+}
+
+.sticky_navigation .nav li.active::before {
+    border-top: 1px solid var(--color-orange);
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+.sticky_navigation .nav li.active::after {
+    border-bottom: 1px solid var(--color-orange);
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.sticky_navigation .navbar-brand:hover{
+    color: var(--color-white);
+}
+
+.main-menu {
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    margin-top: 1rem;
+}
+
+.logo {
+    padding: .5rem;
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+}
+
+.navbar {
+    border: 0;
+    margin-bottom: 0;
+
+    &-brand {
+        padding: 2.5rem 0;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        display: block;
+        color: var(--color-white);
+        font-weight: 800;
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: var(--color-white);
+        }
+    }
+
+    &-right li {
+        display: inline-block;
+        float: none;
+    }
+
+    &-right li a {
+        color: var(--color-white);
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    &-right li.active a {
+        font-weight: bold;
+        color: var(--color-white);
+    }
+}
+
+.nav > li > a:hover,
+.nav > li > a:active,
+.nav > li > a:focus{
+    background: none;
+}
+
+/******* Navigation CSS End *******/
+
+/******* Banner Components CSS Start *******/
+.welcome-text {
+    color: var(--color-white);
+
+    &__intro h1 {
+        font-size: 6rem;
+        font-weight: 200;
+        margin: 0;
+    }
+
+    &__intro h2 {
+        font-size: 3rem;
+        font-weight: 800;
+    }
+}
+
+.ah-headline.clip .ah-words-wrapper::after {
+    background-color: var(--color-white);
+}
+
+.btn-resume {
+    display: inline-block;
+    background-color: var(--color-orange);
+    font-size: 1.4rem;
+    line-height: 1.2;
+    padding: 1.2rem 2.5rem;
+    border-radius: .5rem;
+    margin-top: 0;
+    margin-right: 1rem;
+}
+
+.btn-resume a {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.banner-btn {
+    &,
+    &:link,
+    &:visited {
+    background: var(--color-orange);
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: .8rem 2.5rem;
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--color-white);
+    text-transform: uppercase;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    border-radius: .5rem;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: var(--color-white);
+    }
+}
+
+/******* Banner Components CSS End *******/
+
+/******* About Components CSS Start *******/
+.about-text-left {
+    text-align: right;
+    color: var(--color-orange-dark);
+    margin-top: 2.5rem;
+
+    &__main {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
+    }
+
+    &__sub {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__para {
+        font-size: 1.5rem;
+        color: var(--color-grey-dark);
+        margin-bottom: 5rem;
+    }
+}
+
+.about-text-right {
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+
+    &__main {
+        color: var(--color-orange-dark);
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.progressbar {
+    position: relative;
+    display: block;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    background: var(--color-grey);
+    height: 3.5rem;
+    border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -webkit-transition:0.4s linear;
+    -moz-transition:0.4s linear;
+    -ms-transition:0.4s linear;
+    -o-transition:0.4s linear;
+    transition:0.4s linear;
+    -webkit-transition-property:width, background-color;
+    -moz-transition-property:width, background-color;
+    -ms-transition-property:width, background-color;
+    -o-transition-property:width, background-color;
+    transition-property:width, background-color;
+
+    &-title {
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 10rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color:var(--color-white);
+        background:var(--color-black);
+        -webkit-border-top-left-radius: .5rem;
+        -webkit-border-bottom-left-radius: .4rem;
+        -moz-border-radius-topleft: .5rem;
+        -moz-border-radius-bottomleft: .4rem;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .4rem;
+
+        & span {
+            display:block;
+            background:rgba(0, 0, 0, 0.1);
+            padding: 0 2rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            -webkit-border-top-left-radius: .4rem;
+            -webkit-border-bottom-left-radius: .4rem;
+            -moz-border-radius-topleft: .4rem;
+            -moz-border-radius-bottomleft: .4rem;
+            border-top-left-radius: .4rem;
+            border-bottom-left-radius: .4rem;   
+        }
+    }
+
+    &-bar {
+        height:3.5rem;
+        background:var(--color-orange);
+        border-radius:3px;
+        -moz-border-radius:3px;
+        -webkit-border-radius:3px;
+    }
+
+    &-percent {
+        position:absolute;
+        right: 1rem;
+        top: 0;
+        font-size: 1.2rem;
+        height: 3rem;
+        line-height: 3.5rem;
+        color:#000;
+    }
+}
+/******* About Components CSS End *******/
+
+/******* Skills Components CSS Start *******/
+.line-header {
+    display: block;
+    height: .2rem;
+    width: 10rem;
+    background: var(--color-orange-dark);
+    margin: 0 auto;
+}
+
+.skills {
+    &-header {
+        color: var(--color-black);
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    &-single {
+        padding: 3rem 2rem;
+        margin: 0 1.5rem 1.5rem;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            -webkit-transition: ease .1s;
+	        -o-transition: ease .1s;
+            transition: ease .1s;
+            
+            & .skills-icon {
+                -webkit-transform: rotate(360deg);
+	            -ms-transform: rotate(360deg);
+	            transform: rotate(360deg);
+	            -webkit-transition: .9s;
+	            -o-transition: .9s;
+	            transition: .9s;
+            }
+
+            & .skills-content__header {
+                color: var(--color-orange);
+            }
+        }
+    }
+    &-icon {
+        display: inline-block;
+        height: 5rem;
+        width: 5rem;
+    }
+    &-content {
+        color: var(--color-black);
+
+        &__header {
+            font-size: 2rem;
+            line-height: 1.5;
+        }
+        &__para {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+}
+
+/******* Skills Components CSS End *******/
+
+/******* Projects Components CSS Start *******/
+.project {
+
+    &-header {
+        color: var(--color-black);
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    &-text__main {
+        color: var(--color-black);
+        text-transform: uppercase;
+        text-align: center;
+	    margin: 0;
+	    font-size: 2.4rem;
+	    margin-bottom: 1rem;
+	    border-bottom: .2rem solid var(--color-orange-light);
+	    padding-bottom: 1rem;
+    }
+
+    &-text__sub {
+        color: var(--color-grey-dark);
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: .2rem solid var(--color-orange-light);
+    }
+
+    &-details {
+        &__main {
+            font-weight: bold;
+	        text-transform: uppercase;
+            color: var(--color-orange);
+        }
+    }
+}
+
+.mfp-zoom-out .mfp-with-anim {
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-webkit-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.mfp-zoom-out.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.mfp-zoom-out.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+.mfp-zoom-out.mfp-removing .mfp-with-anim {
+	-webkit-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	transform: scale(1.3);
+	opacity: 0;
+}
+.mfp-zoom-out.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+.white-popup {
+	position: relative;
+	background: #FFF;
+	padding: 30px;
+	width: auto;
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+.hovereffect {
+	width: 100%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+    background: rgba(221, 89, 12, 0.9);
+    
+    & .project-overlay {
+        width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    overflow: hidden;
+	    top: 0;
+	    left: 0;
+	    padding: 3em;
+        text-align: center;
+    }
+
+    & img {
+        display: block;
+	    position: relative;
+	    max-width: none;
+	    width: calc(100% + 60px);
+	    -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+	    transition: opacity 0.35s, -webkit-transform 0.45s;
+	    -o-transition: opacity 0.35s, transform 0.45s;
+	    transition: opacity 0.35s, transform 0.45s;
+	    transition: opacity 0.35s, transform 0.45s, -webkit-transform 0.45s;
+	    -webkit-transform: translate3d(-40px,0,0);
+	    transform: translate3d(-40px,0,0);
+    }
+
+    & h2 {
+        text-transform: uppercase;
+	    position: relative;
+	    font-size: 1.8rem;
+	    background-color: transparent;
+	    padding: 5% 0 .2rem 0;
+	    text-align: center;
+	    opacity: 0;
+    }
+
+    &:hover {
+        & h2 {
+            color: #fff;
+            opacity: 1;
+        }
+        
+        & img {
+            opacity: 0.2;
+	        filter: alpha(opacity=20);
+	        -webkit-transform: translate3d(0,0,0);
+	        transform: translate3d(0,0,0);
+        }
+
+        & .project-overlay:before,
+        & a,
+        & p {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+    }
+}
+
+.hovereffect .project-overlay:before {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	left: 20px;
+	border: 1px solid #fff;
+	content: '';
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+	transition: opacity 0.35s, -webkit-transform 0.45s;
+	-o-transition: opacity 0.35s, transform 0.45s;
+	transition: opacity 0.35s, transform 0.45s;
+	transition: opacity 0.35s, transform 0.45s, -webkit-transform 0.45s;
+	-webkit-transform: translate3d(-20px,0,0);
+	transform: translate3d(-20px,0,0);
+}
+
+.hovereffect a, .hovereffect p {
+	color: #FFF;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+	transition: opacity 0.35s, -webkit-transform 0.45s;
+	-o-transition: opacity 0.35s, transform 0.45s;
+	transition: opacity 0.35s, transform 0.45s;
+	transition: opacity 0.35s, transform 0.45s, -webkit-transform 0.45s;
+	-webkit-transform: translate3d(-10px,0,0);
+	transform: translate3d(-10px,0,0);
+}
+
+.project-padding {
+    padding: .5rem;
+}
+/******* Projects Components CSS End *******/

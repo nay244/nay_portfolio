@@ -1,0 +1,74 @@
+/******* Banner Layout CSS Start *******/
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.section-banner {
+    background-image: url(../img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+    }
+}
+
+.banner-table {
+    display: table;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.banner-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/******* Banner Layout CSS End *******/
+
+/******* Section Layout CSS Start *******/
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-header h2 {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.section-about {
+    background: var(--section-background-white);
+}
+
+.section-skills {
+    background: var(--section-background-grey);
+}
+
+.section-projects {
+    background: var(--section-background-white);
+}
+/******* Section Layout CSS End *******/
