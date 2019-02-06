@@ -81,7 +81,7 @@ NB: This is the responsive stylesheet of this theme.
     }
 
     .navbar-toggle .icon-bar {
-        background: #E91E63;
+        background: #F6B352;
     }
 
     .navbar-nav {
@@ -156,7 +156,7 @@ NB: This is the responsive stylesheet of this theme.
         float: none;
     }
 
-    .about-area img {
+    .section-about img {
         width: 100%;
     }
 
@@ -164,7 +164,7 @@ NB: This is the responsive stylesheet of this theme.
         margin-top: 40px;
     }
 
-    .services-area .section-header {
+    .section-about .section-header {
         margin-bottom: 0;
     }
 
@@ -185,12 +185,12 @@ NB: This is the responsive stylesheet of this theme.
         max-width: 95%;
     }
 
-    .por-text h2 {
+    .project-text h2 {
         margin-top: 25px;
         font-size: 18px;
     }
 
-    .por-text-details p {
+    .project-text-details p {
         font-size: 12px;
     }
 
@@ -200,7 +200,7 @@ NB: This is the responsive stylesheet of this theme.
         line-height: 150%;
     }
 
-    .single-contact {
+    .contacts-item {
         margin-bottom: 30px;
     }
 
@@ -208,11 +208,11 @@ NB: This is the responsive stylesheet of this theme.
         margin-top: 20px;
     }
 
-    .contact-area .form-control {
+    .section-contact .form-control {
         font-size: 11px;
     }
 
-    .contact-area {
+    .section-contact {
         background-position: inherit;
     }
 
@@ -234,7 +234,7 @@ NB: This is the responsive stylesheet of this theme.
     }
 
     .navbar-toggle .icon-bar {
-        background: #E91E63;
+        background: #F6B352;
     }
 
     .single-portfolio img {
@@ -262,11 +262,11 @@ NB: This is the responsive stylesheet of this theme.
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px){
-    .portfolio-area .list-inline > li {
+    .section-projects .list-inline > li {
         padding-right: 0;
     }
 
-    .portfolio-area ul.list-inline li {
+    .section-projects ul.list-inline li {
         margin: 7px;
     }
 }
