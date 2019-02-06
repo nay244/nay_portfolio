@@ -221,6 +221,22 @@ NB: This is the responsive stylesheet of this theme.
         margin-bottom: 30px;
     }
 
+    .skills-icon {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .contacts-icon {
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+
+    .contacts-socials__icon {
+        height: 1.2rem;
+        width: 1.2rem;
+        margin: 0 .5rem;
+    }
+
 
 
 }
