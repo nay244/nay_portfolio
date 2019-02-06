@@ -75,17 +75,25 @@ canvas {
 
 /******* Banner Layout CSS End *******/
 /******* Section Layout CSS Start *******/
+.line-header {
+  display: block;
+  height: .2rem;
+  width: 10rem;
+  background: var(--color-orange-dark);
+  margin: 0 auto; }
+
 .section-padding {
-  padding: 60px 0; }
+  padding: 5rem 0; }
 
 .section-header {
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
   text-align: center; }
 
 .section-header h2 {
   display: inline-block;
-  padding: 5px;
-  margin: 5px 0; }
+  color: var(--color-black);
+  padding: .6rem;
+  margin: .6rem 0; }
 
 .section-about {
   background: var(--section-background-white); }
@@ -95,6 +103,14 @@ canvas {
 
 .section-projects {
   background: var(--section-background-white); }
+
+.section-contact {
+  background: var(--section-background-grey); }
+
+.section-footer {
+  background: var(--color-grey-dark);
+  color: var(--color-white);
+  padding: 2rem 0; }
 
 /******* Section Layout CSS End *******/
 /******* Overlay CSS Start *******/
@@ -370,18 +386,6 @@ canvas {
 
 /******* About Components CSS End *******/
 /******* Skills Components CSS Start *******/
-.line-header {
-  display: block;
-  height: .2rem;
-  width: 10rem;
-  background: var(--color-orange-dark);
-  margin: 0 auto; }
-
-.skills-header {
-  color: var(--color-black);
-  font-size: 2.5rem;
-  font-weight: 700; }
-
 .skills-single {
   padding: 3rem 2rem;
   margin: 0 1.5rem 1.5rem;
@@ -417,11 +421,6 @@ canvas {
 
 /******* Skills Components CSS End *******/
 /******* Projects Components CSS Start *******/
-.project-header {
-  color: var(--color-black);
-  font-size: 2.5rem;
-  font-weight: 700; }
-
 .project-text__main {
   color: var(--color-black);
   text-transform: uppercase;
@@ -567,3 +566,65 @@ canvas {
   padding: .5rem; }
 
 /******* Projects Components CSS End *******/
+/******* Contact Components CSS Start *******/
+.contacts-header {
+  font-size: 1.5rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-weight: 700; }
+
+.contacts-para {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark);
+  font-weight: 300; }
+
+.contacts-item {
+  background: #ffffff;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  padding: 5%;
+  text-align: center;
+  margin-bottom: 5rem; }
+
+.contacts-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: var(--color-orange-dark); }
+
+.contacts-socials {
+  padding-top: 5%; }
+  .contacts-socials__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-orange-light);
+    margin: 0 1rem; }
+    .contacts-socials__icon:hover {
+      cursor: pointer; }
+
+#contact-form {
+  background: var(--color-white);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  padding: 5%; }
+
+.section-contact .form-control {
+  border: none;
+  border-bottom: 0.2rem solid var(--color-grey-dark);
+  box-shadow: none;
+  padding: .5rem 0;
+  border-radius: 0;
+  margin-bottom: 3rem; }
+
+.section-contact textarea.form-control {
+  border: 0.2rem solid var(--color-grey-dark);
+  padding: .8rem;
+  height: 25rem;
+  margin-bottom: 3rem; }
+
+.btn.btn-send {
+  background: var(--color-orange);
+  color: var(--color-white);
+  padding: 1.2rem 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+/******* Contact Components CSS End *******/
